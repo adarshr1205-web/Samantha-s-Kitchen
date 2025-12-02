@@ -1,63 +1,225 @@
-<!DOCTYPE html>
+<!--
+File: samanthas_kitchen_index.html
+Purpose: Complete single-file website for "Samantha's Kitchen" ready to copy-paste into GitHub Pages.
+How to use:
+  1. Create a GitHub repo named: samanthaskitchen.github.io (public)
+  2. Add a new file named index.html and paste the contents of this file.
+  3. Commit changes. Go to Settings → Pages and make sure the site is published from branch main and /root.
+  4. Your site will appear at: https://samanthaskitchen.github.io
+
+Replace the placeholders below: https://wa.me/9793092642, /mnt/data/Black & White Minimalist Signature Personal Brand Logo.png (or remove the <img>), YOUR_GOOGLE_MAPS_LINK (optional), and update phone numbers/prices/menu.
+-->
+
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samantha Kitchen | SDD Tiffins</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samantha's Kitchen — Home-style Meals</title>
+  <meta name="description" content="Samantha's Kitchen: Fresh home-cooked meals, weekly & monthly tiffin plans. Serving Noida sectors 59-63, 73, 78, 117, 120." />
+  <style>
+    :root{--accent:#e67e22;--accent-dark:#d35400;--bg:#fffaf5;--card:#fff3e0;--muted:#555}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0; background:var(--bg); color:#222}
+    .container{max-width:980px;margin:0 auto;padding:22px}
+    header{display:flex;gap:16px;align-items:center}
+    header img.logo{width:72px;height:72px;border-radius:12px;object-fit:cover}
+    h1{margin:0;font-size:28px;color:var(--accent-dark)}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+
+    .cta{display:flex;flex-direction:column;gap:12px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-secondary{background:white;color:var(--accent);border:2px solid var(--accent)}
+
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .feature{flex:1 1 200px;padding:12px;border-radius:10px;background:white}
+
+    .section{margin-top:22px}
+    h2{margin:0 0 10px}
+    ul{margin:0 0 0 18px}
+
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .menu-item{background:white;padding:12px;border-radius:10px}
+
+    footer{margin-top:28px;padding:14px 18px;border-radius:10px;background:#fff;text-align:center;color:var(--muted)}
+
+    /* small screens */
+    @media(max-width:820px){
+      .hero{grid-template-columns:1fr}
+      header img.logo{width:64px;height:64px}
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <header>
+      <img class="logo" src="YOUR_LOGO_URL" alt="Samantha's Kitchen Logo" onerror="this.style.display='none'">
+      <div>
+        <h1>🍱 Samantha's Kitchen</h1>
+        <p class="lead">Home-style meals • Hygienic • Delivered hot • Weekly & Monthly plans</p>
+        <small>Service areas: Noida Sec-59–63, 73, 78, 117, 120 & nearby</small>
+      </div>
+    </header>
 
-<header>
-    <h1>Samantha Kitchen (SDD Tiffins)</h1>
-    <p>Home-Cooked Healthy Meals Delivered Fresh Daily</p>
-</header>
+    <div class="hero">
+      <div>
+        <div class="card">
+          <h2>About Us</h2>
+          <p>Fresh, homemade food prepared daily. Balanced meals suitable for kids and adults. FSSAI: <strong>22725925000847</strong></p>
 
-<section class="hero">
-    <h2>Healthy Tiffins for Adults & Kids</h2>
-    <p>Daily Meals • Fruit Bowls • Salad Bowls</p>
-    <a href="https://wa.me/9793092642" class="btn">Order on WhatsApp</a>
-</section>
+          <div class="section">
+            <h3>Why choose Samantha's Kitchen?</h3>
+            <div class="features">
+              <div class="feature">✅ Home-cooked taste</div>
+              <div class="feature">✅ Clean kitchen & packaging</div>
+              <div class="feature">✅ Flexible plans (1 / 2 / 3 meals/day)</div>
+              <div class="feature">✅ Coupons & trial boxes</div>
+            </div>
+          </div>
 
-<section class="section">
-    <h2>Our Plans</h2>
+          <div class="section">
+            <h3>Subscription & Prices</h3>
+            <ul>
+              <li><strong>Adults — 6 Days (2 meals/day):</strong> ₹999</li>
+              <li><strong>Adults — 6 Days (1 meal/day):</strong> ₹499</li>
+              <li><strong>Adults — Monthly (2 meals/day):</strong> ₹3,499</li>
+              <li><strong>Adults — Monthly (1 meal/day):</strong> ₹1,999</li>
+              <li><strong>Per Meal:</strong> ₹79 • <strong>Trial Meal:</strong> ₹49</li>
+            </ul>
 
-    <div class="card">
-        <h3>Adults Tiffin Plans</h3>
-        <p>6 Days — ₹999 (2 meals/day)</p>
-        <p>6 Days — ₹499 (1 meal/day)</p>
-        <p>Monthly — ₹3499 (2 meals/day)</p>
-        <p>Monthly — ₹1999 (1 meal/day)</p>
-        <p>Per Meal — ₹79 • Trial Meal — ₹49</p>
+            <h4 style="margin-top:10px">Kids Plan</h4>
+            <p><strong>Kids (4–10 yrs) — 1 meal/day (6 days):</strong> ₹1,499 / month</p>
+
+            <h4 style="margin-top:10px">Fruits & Salad (add-on or separate)</h4>
+            <ul>
+              <li>Daily Salad Bowl: ₹49/day • ₹279/week</li>
+              <li>Daily Fruit Bowl: ₹69/day • ₹399/week</li>
+              <li>Combo (Fruit + Salad): ₹109/day • ₹599/week</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Contact</h3>
+            <p>📞 9793092642 &nbsp; | &nbsp; 9415285657</p>
+            <p>
+              <a class="btn btn-primary" href="https://wa.me/9793092642" target="_blank" rel="noopener">Join WhatsApp / Order Now</a>
+              <a class="btn btn-secondary" href="tel:9793092642">Call 9793092642</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="card">
+            <h3>Quick Signup / Enquiry</h3>
+            <p>Use this Google Form link for customer signups or paste it in place of the link below.</p>
+            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSex355r8pEI7D8U82bGI-o_lrPUcTT0flGh44T6pih6hbJDOg/viewform?usp=publish-editor" id="signupLink" target="_blank">Fill Google Form</a></p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Today's Sample Menu</h3>
+        <div class="menu-grid">
+          <div class="menu-item"><strong>Breakfast</strong><br>Parantha + Sabzi</div>
+          <div class="menu-item"><strong>Lunch</strong><br>Dal, Sabzi, Roti, Salad</div>
+          <div class="menu-item"><strong>Dinner</strong><br>Light khichdi + Raita</div>
+          <div class="menu-item"><strong>Kids</strong><br>Nutri-poha + Fruits</div>
+        </div>
+
+        <div style="margin-top:12px">
+          <h4>Delivery Areas</h4>
+          <p>Noida Sec-59–63, 73, 78, 117, 120</p>
+        </div>
+
+        <div style="margin-top:14px;text-align:center">
+          <small>Share this site with customers</small>
+          <div style="margin-top:8px">👉 <a href="https://wa.me/9793092642" target="_blank">WhatsApp Group</a></div>
+        </div>
+      </aside>
     </div>
 
-    <div class="card">
-        <h3>Kids Tiffin (4–10 Years)</h3>
-        <p>₹1499 / Month</p>
-        <p>1 Meal/Day • 6 Days a Week</p>
-        <p>Fresh • Mild Spices • Kid-Friendly</p>
+    <div class="section">
+      <div class="card">
+        <h2>Adult Tiffin Menu (2 meals/day — Breakfast & Dinner)</h2>
+        <p><strong>100% Homemade • Hygienic • Authentic Bihari-style vegetarian • 6 days a week</strong></p>
+        <p><small>Delivery across Noida — Free within 1 km • Timing: Morning 8:00–10:00 AM, Evening 8:00–10:00 PM</small></p>
+        <table style="width:100%;margin-top:12px;border-collapse:collapse">
+          <tr>
+            <th style="text-align:left;padding:6px">Day</th>
+            <th style="text-align:left;padding:6px">Breakfast</th>
+            <th style="text-align:left;padding:6px">Dinner</th>
+          </tr>
+          <tr>
+            <td style="padding:6px">MON</td>
+            <td style="padding:6px">Sattu Paratha + Chutney + Aachar</td>
+            <td style="padding:6px">Arhar Dal + Bhindi Bhujia + Roti + Rice</td>
+          </tr>
+          <tr>
+            <td style="padding:6px">TUE</td>
+            <td style="padding:6px">Aloo Paratha + Chutney + Aachar</td>
+            <td style="padding:6px">Cholle + Roti + Rice + Salad</td>
+          </tr>
+          <tr>
+            <td style="padding:6px">WED</td>
+            <td style="padding:6px">Kachori + Aloo Tamatar + Chutney</td>
+            <td style="padding:6px">Paneer + Jeera Rice + Roti + Chutney</td>
+          </tr>
+          <tr>
+            <td style="padding:6px">THU</td>
+            <td style="padding:6px">Paratha + Bhindi Bhujia + Aachar</td>
+            <td style="padding:6px">Rajma + Roti + Rice + Salad</td>
+          </tr>
+          <tr>
+            <td style="padding:6px">FRI</td>
+            <td style="padding:6px">Mixed Veg Paratha + Curd + Aachar</td>
+            <td style="padding:6px">Besan Sabji + Roti + Rice + Salad</td>
+          </tr>
+          <tr>
+            <td style="padding:6px">SAT</td>
+            <td style="padding:6px">Puri + Masala Aaloo + Aachar</td>
+            <td style="padding:6px">Fried Rice + Manchurian</td>
+          </tr>
+        </table>
+
+        <div style="margin-top:12px">
+          <h3>Subscription Plans (as on your menu)</h3>
+          <ul>
+            <li>7 Days Plan: ₹999 — 2 Meals/Day</li>
+            <li>7 Days Plan: ₹499 — 1 Meal/Day</li>
+            <li>Monthly Plan: ₹3,499 — 2 Meals/Day</li>
+            <li>Monthly Plan: ₹1,999 — 1 Meal/Day</li>
+            <li>Per Meal: ₹80 • Trial Meal: ₹100</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
-    <div class="card">
-        <h3>Daily Fruit & Salad Subscription</h3>
-        <p>🥗 Salad Bowl — ₹49/day • ₹279/week</p>
-        <p>🍎 Fruit Bowl — ₹69/day • ₹399/week</p>
-        <p>✨ Combo (Fruit + Salad) — ₹109/day • ₹599/week</p>
+    <div class="section">
+      <div class="card">
+        <h2>How to Order</h2>
+        <ol>
+          <li>Click the WhatsApp button and message "Order / Trial"</li>
+          <li>Tell your area and choose plan (weekly/monthly)</li>
+          <li>We confirm delivery slot and start next working day</li>
+        </ol>
+      </div>
     </div>
-</section>
 
-<section class="section delivery">
-    <h2>Delivery Areas</h2>
-    <p>Noida Sector: 73, 74, 75, 76, 77, 78, 120, 121, 122</p>
-    <p><strong>Free Delivery</strong> within 1 KM of Sector 73</p>
-</section>
+    <footer>
+      <div>© Samantha's Kitchen — Built with love • FSSAI: 22725925000847</div>
+      <div style="margin-top:6px">Want changes? Reply here and I will update the file (logo, prices, colors, images).</div>
+    </footer>
+  </div>
 
-<footer>
-    <p>FSSAI Lic. No.: 22725925000847</p>
-    <p>Call: 9793092642 | 9415285657</p>
-    <p>© 2025 Samantha Kitchen (SDD) by ARSS Holding</p>
-</footer>
-
+  <!-- Optional small script: updates signup link text if user sets it -->
+  <script>
+    const signupEl = document.getElementById('signupLink');
+    if (signupEl && signupEl.href === '#') signupEl.textContent = 'Add your Google Form link in the HTML file';
+  </script>
 </body>
 </html>
